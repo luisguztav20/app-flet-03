@@ -21,7 +21,12 @@ def main(page: ft.page):
             print('VACIO')
             show_alert(event)
         else:
-            biseccion(txt_x1, txt_xu, txt_fx, txt_cifras_sig, lbl_resultados, resultados, page)
+            x1 = float(txt_x1.value)
+            xu = float(txt_xu.value)
+            f_x = str(txt_fx.value)
+            cifras_sig = float(txt_cifras_sig.value)
+            
+            biseccion(x1, xu, f_x, cifras_sig, lbl_resultados, resultados, page)
             # fx = sp.sympify(txt_fx.value)
             # graficar(fx, page)
   

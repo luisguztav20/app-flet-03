@@ -11,7 +11,7 @@ import flet as ft
 # fx = (sp.E**-x)-x
 
 
-def biseccion(txt_x1, txt_xu, txt_fx, txt_cifras_sig, lbl_resultados, resultados, page):
+def biseccion(x1, xu, f_x, cifras_sig, lbl_resultados, resultados, page):
     
     def eval_infx(xn, fx):
         return fx.subs(x, xn)
@@ -32,11 +32,7 @@ def biseccion(txt_x1, txt_xu, txt_fx, txt_cifras_sig, lbl_resultados, resultados
     
     x = sp.symbols('x')
     
-    x1 = float(txt_x1.value)
-    xu = float(txt_xu.value)
-    fx = sp.sympify(txt_fx.value)
-    cifras_sig = float(txt_cifras_sig.value)
-
+    fx = sp.sympify(f_x)
     
     Es = tolerancia(cifras_sig)
     
